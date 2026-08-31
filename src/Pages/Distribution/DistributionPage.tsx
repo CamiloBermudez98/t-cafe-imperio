@@ -33,6 +33,7 @@ export const DistributionPage: React.FC = () => {
       isFactory: false
     },
     {
+      
       id: '3',
       name: 'Dumar',
       city: 'Bogotá D.C.',
