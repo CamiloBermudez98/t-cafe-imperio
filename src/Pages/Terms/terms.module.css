@@ -74,9 +74,10 @@
 }
 
 .header-title {
-  font-size: 2.8rem;
+  font-size: 2.5rem;      /* Tamaño adecuado para móvil */
   font-weight: 800;
   color: #ffffff;
+  line-height: 1.25;      /* <--- ESTO ES LO CLAVE: Da espacio vertical entre líneas */
   margin: 0 0 12px 0;
   letter-spacing: -0.5px;
 }
@@ -156,5 +157,12 @@
   .back-link {
     top: 90px;
     left: 6%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2rem;      /* Se reduce un poco en pantallas pequeñas */
+    line-height: 1.2;     /* Evita que se monten las palabras */
   }
 }
