@@ -1,0 +1,633 @@
+.landing-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* HERO CON BANNER A PANTALLA COMPLETA */
+.hero {
+  width: 100%;
+  min-height: 85vh;
+  padding-top: 120px; 
+  padding-bottom: 80px;
+  padding-left: 6%;
+  padding-right: 6%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  
+  background-color: #0f0a06;
+  background-image: linear-gradient(
+      90deg, 
+      rgba(15, 10, 6, 0.92) 0%, 
+      rgba(15, 10, 6, 0.5) 65%, 
+      rgba(15, 10, 6, 0.8) 100%
+    ),
+    url('../../assets/banner-cafe.jpg');
+  
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Aumentamos el ancho para que el texto respire y se extienda horizontalmente */
+.hero-content {
+  max-width: 800px; 
+  color: #ffffff;
+}
+
+/* TÍTULO MÁS ALARGADO (Ajustado a 2 líneas principales) */
+.hero-title {
+  font-size: 3.2rem; /* Ligeramente más compacto para que fluya en horizontal */
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 20px 0;
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title span {
+  color: #f3e098;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: #dcd6cd;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* CONTENEDOR DE BOTONES */
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* INSIGNIA */
+.badge-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(243, 224, 152, 0.35);
+  border-radius: 30px;
+  font-size: 0.8rem;
+  color: #f3e098;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* BOTÓN PRINCIPAL */
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, #c59b27 0%, #9a7413 100%);
+  color: #ffffff;
+  padding: 15px 34px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(197, 155, 39, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(197, 155, 39, 0.5);
+}
+
+/* BOTÓN SECUNDARIO (Nuestros Productos) */
+.btn-secondary {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #f3e098;
+  color: #f3e098;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   SECCIÓN NUESTRA HISTORIA (DISEÑO LIMPIO DE 2 COLUMNAS)
+   ========================================== */
+.history-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 5%;
+  box-sizing: border-box;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.history-image-wrapper {
+  width: 100%;
+}
+
+.history-image-card {
+  width: 100%;
+  height: 420px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: flex-end;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.history-img-badge {
+  background: rgba(15, 10, 6, 0.85);
+  backdrop-filter: blur(5px);
+  color: #f3e098;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  border: 1px solid rgba(243, 224, 152, 0.3);
+}
+
+.history-content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.history-tag {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #7a6538;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.history-main-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a120b;
+  letter-spacing: -0.5px;
+  margin: 0 0 20px 0;
+  line-height: 1.15;
+}
+
+.history-description {
+  font-size: 1.05rem;
+  color: #4a3b32;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.history-description-sub {
+  font-size: 0.95rem;
+  color: #6b5b52;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.history-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #1a120b;
+  color: #ffffff;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+}
+
+.history-action-btn:hover {
+  background: #c59b27;
+  color: #1a120b;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   SECCIÓN NUESTROS PRODUCTOS (LANZAMIENTOS)
+   ========================================== */
+.releases-section {
+  width: 100%;
+  max-width: 1300px;
+  margin: 100px auto;
+  padding: 0 5%;
+  box-sizing: border-box;
+}
+
+.releases-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.releases-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a120b;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+
+.releases-desc {
+  color: #6b5b52;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.releases-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  border-bottom: 2px solid #e6ded6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tab-item {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #8c7a70;
+  padding-bottom: 12px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.tab-item.active {
+  color: #1a120b;
+}
+
+.tab-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #c59b27; /* Línea indicadora dorada */
+}
+
+/* Cuadrícula estándar de 3 columnas (Café y Accesorios) */
+.releases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.release-card {
+  background: #140d09;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.release-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.card-image-wrapper {
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.product-badge-mock {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(197, 155, 39, 0.4);
+  color: #f3e098;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.release-card-footer {
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a100a;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.release-card-footer h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.explore-btn {
+  color: #f3e098;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: opacity 0.2s;
+}
+
+.explore-btn:hover {
+  opacity: 0.8;
+}
+
+/* ==========================================
+   ESTILO DE TARJETAS DE REFERENCIA (MÉTODOS - 2 COLUMNAS)
+   ========================================== */
+.releases-grid-ref {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.release-card-ref {
+  width: 100%;
+  height: 480px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.release-card-ref:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-bg-1, .card-img-bg-2 {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), url('../../assets/banner-cafe.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.card-overlay-gradient {
+  width: 100%;
+  padding: 40px 30px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(10, 6, 4, 0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.card-overlay-gradient h3 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.explore-btn-ref {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #1a120b;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+.explore-btn-ref:hover {
+  background: #f3e098;
+  transform: scale(1.05);
+}
+
+.explore-icon {
+  background: #c52a2a;
+  color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+/* ==========================================
+   WIDGET FLOTANTE DE REDES SOCIALES (DERECHA)
+   ========================================== */
+.social-sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  background: rgba(15, 10, 6, 0.85);
+  backdrop-filter: blur(8px);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  overflow: hidden;
+  box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.2s, color 0.2s;
+}
+
+.social-icon:last-child {
+  border-bottom: none;
+}
+
+.social-icon:hover {
+  background: #c59b27;
+  color: #0f0a06;
+}
+
+/* ==========================================
+   SECCIÓN DE RECETAS Y PREPARACIONES
+   ========================================== */
+.recipes-section {
+  width: 100%;
+  max-width: 1300px;
+  margin: 100px auto;
+  padding: 0 5%;
+  box-sizing: border-box;
+}
+
+.recipes-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.recipes-subtitle-tag {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #7a6538;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.recipes-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a120b;
+  letter-spacing: -0.5px;
+  margin-bottom: 15px;
+}
+
+.recipes-see-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #1a120b;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #e6ded6;
+  transition: all 0.2s ease;
+}
+
+.recipes-see-all:hover {
+  background: #f3e098;
+  transform: scale(1.05);
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.recipe-card {
+  height: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.recipe-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.recipe-content h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.recipe-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #1a120b;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.recipe-link:hover {
+  background: #f3e098;
+  transform: scale(1.05);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 900px) {
+  .history-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .history-image-card {
+    height: 300px;
+  }
+  .releases-grid, .releases-grid-ref, .recipes-grid {
+    grid-template-columns: 1fr;
+  }
+  .social-sidebar {
+    display: none;
+  }
+}

@@ -1,0 +1,274 @@
+/* HEADER FLOTANTE CON DIFUMINADO ELEGANTE */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  z-index: 1000;
+  box-sizing: border-box;
+
+  /* Difuminado suave café/oscuro que se desvanece hacia abajo */
+  background: linear-gradient(
+    180deg,
+    rgba(15, 9, 5, 0.95) 0%,
+    rgba(15, 9, 5, 0.7) 50%,
+    rgba(15, 9, 5, 0) 100%
+  );
+}
+
+.brandContainer {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoCircleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 65px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+.logoImage {
+  max-height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.actionsContainer {
+  display: flex;
+  align-items: center;
+}
+
+.menuToggleBtn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(5px);
+  transition: all 0.2s ease;
+}
+
+.menuToggleBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #f3e098;
+  color: #f3e098;
+}
+
+.menuIcon {
+  font-size: 1.1rem;
+}
+
+/* ==========================================
+    MENÚ OVERLAY (PANTALLA COMPLETA)
+   ========================================== */
+.menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(10, 6, 4, 0.96);
+  backdrop-filter: blur(15px);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 6%;
+  box-sizing: border-box;
+  animation: fadeIn 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.menuOverlayHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+}
+
+.overlayBrand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.closeBtn:hover {
+  color: #f3e098;
+}
+
+/* CONTENIDO INTERNO DEL OVERLAY */
+.menuOverlayContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+  margin-top: 40px;
+  align-items: start;
+}
+
+.sectionHeading {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* CUADRÍCULA DE 4 TARJETAS */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* TARJETAS DESTACADAS CON IMÁGENES DE FONDO */
+.featureCardSpecial, 
+.featureCardGourmet,
+.featureCardRecipes,
+.featureCardDistribution {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(197, 155, 39, 0.4);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 200px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.featureCardSpecial:hover, 
+.featureCardGourmet:hover,
+.featureCardRecipes:hover,
+.featureCardDistribution:hover {
+  transform: translateY(-4px);
+  border-color: #f3e098;
+}
+
+/* Fondos específicos por tarjeta */
+.featureCardSpecial {
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.2) 20%, rgba(15,10,6,0.92) 100%), url('../../assets/especial.jpeg');
+}
+
+.featureCardGourmet {
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.2) 20%, rgba(15,10,6,0.92) 100%), url('../../assets/gourmet.jpeg');
+}
+
+.featureCardRecipes {
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.2) 20%, rgba(15,10,6,0.92) 100%), url('../../assets/capuchino.jpg');
+}
+
+.featureCardDistribution {
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.2) 20%, rgba(15,10,6,0.92) 100%), url('../../assets/banner-cafe.jpg');
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+}
+
+.cardContent h4 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.cardContent p {
+  color: #dcd6cd;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.cardLink {
+  color: #f3e098;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.cardLink:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* LISTA DE ENLACES A LA DERECHA */
+.menuNavLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 40px;
+}
+
+.navLinkItem {
+  color: #dcd6cd;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navLinkItem:hover {
+  color: #f3e098;
+  transform: translateX(5px);
+}
+
+/* RESPONSIVO PARA MÓVILES */
+@media (max-width: 900px) {
+  .menuOverlayContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+  .menuNavLinks {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+  }
+}

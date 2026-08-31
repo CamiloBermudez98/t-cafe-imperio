@@ -1,0 +1,248 @@
+.products-page-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #0f0a06; /* Fondo general oscuro ultra elegante */
+}
+
+/* BANNER SUPERIOR INMERSIVO */
+.products-hero-banner {
+  width: 100%;
+  min-height: 520px;
+  padding: 140px 6% 80px 6%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* ELIMINA ESTA LÍNEA: border-bottom: 2px solid rgba(197, 155, 39, 0.3); */
+  position: relative;
+}
+
+/* BOTÓN VOLVER AL INICIO (Anclado limpiamente arriba a la izquierda) */
+.back-link {
+  position: absolute;
+  top: 115px;
+  left: 6%;
+  color: #f3e098;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 10, 6, 0.75);
+  padding: 8px 18px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(197, 155, 39, 0.3);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.back-link:hover {
+  background: #c59b27;
+  color: #0f0a06;
+  border-color: #c59b27;
+  transform: translateY(-2px);
+}
+
+/* TARJETA DE VIDRIO (GLASSMORPHISM) EN EL BANNER */
+.banner-glass-card {
+  max-width: 850px;
+  width: 100%;
+  background: rgba(20, 14, 10, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 155, 39, 0.25);
+  border-radius: 20px;
+  padding: 50px 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+.header-tag {
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  color: #f3e098;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.header-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 15px 0;
+  letter-spacing: -0.5px;
+}
+
+.header-subtitle {
+  margin: 0 auto;
+  color: #dcd6cd;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+/* CONTENEDOR DE LA CUADRÍCULA DE PRODUCTOS */
+.products-content-wrapper {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 80px 6%;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.products-grid-detailed {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 45px;
+}
+
+/* TARJETAS DE PRODUCTO DE ALTO NIVEL */
+.product-detail-card {
+  background: #16100c;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(197, 155, 39, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.product-detail-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(197, 155, 39, 0.5);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 20px rgba(197, 155, 39, 0.1);
+}
+
+.product-img-box {
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 25px;
+  overflow: hidden;
+}
+
+/* Efecto zoom suave en la imagen de la tarjeta al hacer hover */
+.product-detail-card:hover .product-img-box {
+  background-size: 105%;
+  transition: background-size 0.6s ease;
+}
+
+.img-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(22,16,12,0.85) 100%);
+  z-index: 1;
+}
+
+.product-badge {
+  position: relative;
+  z-index: 2;
+  background: rgba(15, 10, 6, 0.85);
+  backdrop-filter: blur(8px);
+  color: #f3e098;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border: 1px solid rgba(197, 155, 39, 0.3);
+}
+
+.product-info-box {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: #16100c;
+}
+
+.product-info-box h2 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.product-info-box p {
+  color: #b5a89d;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.card-footer-action {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 22px;
+}
+
+/* BOTÓN DE WHATSAPP ELEGANTE Y FLUIDO */
+.buy-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #c59b27 0%, #9a7413 100%);
+  color: #0f0a06;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(197, 155, 39, 0.25);
+  transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+  background: linear-gradient(135deg, #f3e098 0%, #c59b27 100%);
+  box-shadow: 0 6px 20px rgba(197, 155, 39, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-arrow {
+  transition: transform 0.2s ease;
+}
+
+.buy-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* RESPONSIVO PARA MÓVILES */
+@media (max-width: 900px) {
+  .products-grid-detailed {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .header-title {
+    font-size: 2.3rem;
+  }
+  .banner-glass-card {
+    padding: 30px 20px;
+  }
+  .back-link {
+    top: 95px;
+    left: 5%;
+  }
+}

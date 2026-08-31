@@ -1,0 +1,125 @@
+.footerContainer {
+  width: 100%;
+  background-color: #140d09; /* Tono café oscuro elegante y profundo acorde al branding */
+  color: #dcd6cd;
+  padding: 60px 8% 20px 8%;
+  box-sizing: border-box;
+  border-top: 2px solid rgba(197, 155, 39, 0.2);
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Columna de Marca */
+.footerBrandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footerLogoWrapper {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 8px 16px;
+  border-radius: 30px;
+  width: fit-content;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footerLogo {
+  height: 35px;
+  width: auto;
+  object-fit: contain;
+}
+
+.certBadge {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.certTitle {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: #f3e098;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.certSubtitle {
+  font-size: 0.8rem;
+  color: #a89f91;
+}
+
+/* Columnas de Enlaces y Contacto */
+.footerLinksCol {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footerHeading {
+  color: #ffffff;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerList li {
+  font-size: 0.9rem;
+  color: #dcd6cd;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footerIcon {
+  font-size: 0.9rem;
+}
+
+.footerLinkItem {
+  color: #dcd6cd;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footerLinkItem:hover {
+  color: #f3e098;
+  transform: translateX(4px);
+}
+
+/* Barra inferior */
+.footerBottomBar {
+  max-width: 1300px;
+  margin: 20px auto 0 auto;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #8c7a70;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 900px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
