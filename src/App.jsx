@@ -1,11 +1,12 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import SocialSidebar from './components/SocialSidebar/SocialSidebar';
-import ScrollToTop from './components/ScrollToTop/ScrollToTop'; // <--- 1. Importa el componente
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
-import HomePage from './Pages/Home/homePage';
+// Asegúrate de que la ruta y la H coincidan exactamente con tu archivo (HomePage.tsx)
+import HomePage from './Pages/Home/HomePage';
 import NosotrosPage from './Pages/Nosotros/NosotrosPage';
 import RecipesPage from './Pages/Recipes/RecipesPage';
 import ProductsPage from './Pages/Products/ProductsPage';
@@ -23,15 +24,18 @@ function App() {
 
   return (
     <div className="app-container">
-      <ScrollToTop /> {/* <--- 2. Colócalo aquí para que fuerce el scroll arriba al cambiar de página */}
+      <ScrollToTop />
       
       <Header whatsappUrl={whatsappUrl} />
       <SocialSidebar whatsappUrl={whatsappUrl} />
 
       <main className="main-content">
         <Routes>
-          <Route path="/" element={<Navigate to="/Home" replace />} />
+          {/* Ambas rutas cargan directamente el componente de inicio sin redirecciones */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/Home" element={<HomePage />} />
+
           <Route path="/nosotros" element={<NosotrosPage />} />
           <Route path="/productos" element={<ProductsPage />} />
           <Route path="/recetas" element={<RecipesPage />} />
