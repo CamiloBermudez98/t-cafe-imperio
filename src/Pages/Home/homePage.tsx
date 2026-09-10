@@ -17,6 +17,7 @@ import historiaImg from '../../assets/historia.jpg';
 import capuchinoImg from '../../assets/capuchino.jpg';
 import expressoImg from '../../assets/expresso.jpg';
 import latteImg from '../../assets/latte.jpg';
+import AffogatoImg from '../../assets/Affogato Gourmet.png';
 import mugImg from '../../assets/consumo.jpeg';
 import cucharaImg from '../../assets/consumo.jpeg';
 
@@ -243,7 +244,14 @@ export const HomePage: React.FC = () => {
               </Link>
             </div>
           </div>
-
+          <div className={styles['recipe-card']} style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.1) 40%, rgba(15,10,6,0.9) 100%), url(${AffogatoImg})` }}>
+            <div className={styles['recipe-content']}>
+              <h3>Affogato Gourmet</h3>
+              <Link to="/recetas" className={styles['recipe-link']}>
+                <span className={styles['explore-icon']}>➔</span> Preparar receta
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

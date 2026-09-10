@@ -10,8 +10,8 @@ export const RecipesPage: React.FC = () => {
   // Estado para la línea de café seleccionada ('tradicional' | 'gourmet' | 'especial')
   const [selectedCoffee, setSelectedCoffee] = useState<'tradicional' | 'gourmet' | 'especial'>('tradicional');
   
-  // Estado para la preparación seleccionada ('espresso' | 'capuchino' | 'latte')
-  const [selectedRecipe, setSelectedRecipe] = useState<'espresso' | 'capuchino' | 'latte'>('espresso');
+  // Estado para la preparación seleccionada (agregamos 'affogato')
+  const [selectedRecipe, setSelectedRecipe] = useState<'espresso' | 'capuchino' | 'latte' | 'affogato'>('espresso');
 
   // Datos y perfiles oficiales actualizados de Café Imperio
   const coffeeData = {
@@ -25,7 +25,7 @@ export const RecipesPage: React.FC = () => {
       name: 'Café Gourmet',
       image: gourmetImg,
       badge: '✨ EQUILIBRIO PERFECTO',
-      profile: 'Exclusiva combinación para una taza superior.'
+      profile: 'Exclusiva combinación para una taza superior con notas a chocolate y nueces.'
     },
     especial: {
       name: 'Selección Especial',
@@ -82,6 +82,26 @@ export const RecipesPage: React.FC = () => {
         'Extrae un espresso sencillo directamente en el fondo de un vaso alto o taza grande de cerámica.',
         'Calienta y vaporiza la leche manteniendo la boquilla cerca de la superficie para incorporar aire y generar una capa fina de espuma cremosa (aproximadamente 1 cm).',
         'Vierte la leche de manera fluida y constante desde una altura media hacia el centro del espresso para integrar los sabores y lograr un acabado armónico.'
+      ]
+    },
+    affogato: {
+      title: 'Affogato Gourmet',
+      time: '5 minutos',
+      difficulty: 'Fácil / Postre',
+      description: `El equilibrio perfecto entre la intensidad del espresso de ${coffeeData[selectedCoffee].name}, la suavidad del helado de vainilla y el toque crujiente de las nueces. Convierte un postre clásico en una experiencia de alta repostería.`,
+      ingredients: [
+        '1 a 2 shots de ' + coffeeData[selectedCoffee].name + ' (Preparado preferiblemente en Moka o Espresso)',
+        '2 bolas de helado de vainilla artesanal de buena calidad',
+        'Salsa de caramelo al gusto',
+        '1 cucharada de nueces (almendras o avellanas) tostadas y trituradas',
+        'Opcional: Virutas de chocolate oscuro para decorar'
+      ],
+      steps: [
+        'Prepara los bordes: Toma tu vaso de vidrio favorito, pasa un poco de caramelo por el borde superior y recúbrelo con las nueces trituradas para dar textura.',
+        'Sirve la base: Coloca las dos bolas de helado de vainilla en el fondo del vaso y añade un hilo ligero de salsa de caramelo sobre el helado.',
+        'El toque del Barista: Prepara tu café recién hecho bien caliente para lograr el contraste térmico perfecto.',
+        'La magia de la unión: Justo antes de servir, vierte el café caliente directamente sobre el centro del helado de vainilla para que empiece a fundirse lentamente.',
+        'Disfruta: Decora con un poco más de nueces o virutas de chocolate por encima y sírvelo inmediatamente con una cuchara larga.'
       ]
     }
   };
@@ -148,11 +168,12 @@ export const RecipesPage: React.FC = () => {
               id="recipe-select"
               className={styles['recipe-dropdown']}
               value={selectedRecipe}
-              onChange={(e) => setSelectedRecipe(e.target.value as 'espresso' | 'capuchino' | 'latte')}
+              onChange={(e) => setSelectedRecipe(e.target.value as 'espresso' | 'capuchino' | 'latte' | 'affogato')}
             >
               <option value="espresso">☕️ Espresso Clásico</option>
               <option value="capuchino">🍯 Capuccino Dulce de Leche</option>
               <option value="latte">🥛 Latte Tradicional</option>
+              <option value="affogato">🍨 Affogato Gourmet</option>
             </select>
           </div>
 
