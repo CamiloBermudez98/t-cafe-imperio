@@ -13,12 +13,7 @@
   box-sizing: border-box;
 
   /* Difuminado suave café/oscuro que se desvanece hacia abajo */
-  background: linear-gradient(
-    180deg,
-    rgba(15, 9, 5, 0.95) 0%,
-    rgba(15, 9, 5, 0.7) 50%,
-    rgba(15, 9, 5, 0) 100%
-  );
+  background: transparent;
 }
 
 .brandContainer {

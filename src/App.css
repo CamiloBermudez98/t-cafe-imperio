@@ -16,9 +16,9 @@
     outline-offset: 2px;
   }
 }
-.main-content {
+/* .main-content {
   padding-top: 75px; /* Misma altura que el Header para evitar solapamientos */
-}
+/* } */ 
 .hero {
   position: relative;
 
